@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reto 01 - Galería Bootstrap 5</title>
+  <!-- Integración de Bootstrap 5 vía CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+  .card { height: 500px;}
+
+  .card-img-top {
+    height: 280px;
+    object-fit: contain;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-body .btn {margin-top: auto;}
+</style>
+</head>
+<body class="bg-light">
+
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Catálogo de Productos - EFSRT</h2>
+    
+    <div class="row g-4">
+      
+      <!-- Producto 01 (Se repite la estructura para los demás) -->
+      <!-- xl-3 (4 por fila), lg-4 (3 por fila), md-6 (2 por fila), 12 (full ancho en móvil) -->
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="img/laptop.jpg" class="card-img-top p-3" alt="Laptop Core i7">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Laptop Core i7</h5>
+            <p class="card-text text-muted small">16GB RAM - 512GB SSD</p>
+            <!-- Botón con color normativo de éxito (verde) -->
+            <button class="btn btn-success w-100 fw-bold">S/ 3,499.00</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 02 -->
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="img/pc_escritorio.jpg" class="card-img-top p-3" alt="PC de Escritorio">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">PC Core i5</h5>
+            <p class="card-text text-muted small">8GB RAM - 1TB HDD</p>
+            <button class="btn btn-success w-100 fw-bold">S/ 2,150.00</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 03 -->
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="img/monitor.jpg" class="card-img-top p-3" alt="Monitor LED">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Monitor LED 24"</h5>
+            <p class="card-text text-muted small">Full HD - 144Hz</p>
+            <button class="btn btn-success w-100 fw-bold">S/ 780.00</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 04 -->
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="img/teclado.jpg" class="card-img-top p-3" alt="Teclado Gamer">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Teclado Mecánico</h5>
+            <p class="card-text text-muted small">Retroiluminado RGB</p>
+            <button class="btn btn-success w-100 fw-bold">S/ 120.00</button>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- Fin row -->
+  </div> <!-- Fin container -->
+
+  <!-- JavaScript de Bootstrap al final para optimizar carga -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

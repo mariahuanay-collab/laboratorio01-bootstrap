@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+  <meta charset="UTF-8">
+  <!-- Requisito 1.1: Meta viewport para diseño responsivo [2] -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tarea 01 - Bootstrap 5 - María Lourdes</title>
+  
+  <!-- Requisito 1.2: Integración de Bootstrap 5 vía CDN [3] -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <style>
+    /* Requisito 4: Personalización con variables y CSS propio [1] */
+    :root {
+      --color-institucional: #2c3e50; /* Color azul oscuro del IESTP [4] */
+      --color-resaltado: #e67e22;      /* Naranja para botones y acentos */
+    }
+
+    .navbar-custom { background-color: var(--color-institucional); }
+    .btn-custom { 
+      background-color: var(--color-resaltado); 
+      color: white; 
+      transition: 0.3s; /* Transición suave aprendida en Lab 11 [5] */
+    }
+    .btn-custom:hover { 
+      background-color: #d35400; 
+      transform: scale(1.05); /* Efecto de elevación [6] */
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+  <!-- 1. ENCABEZADO CON NAVBAR [1] -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">IESTP MONFORTIANOS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 2. SECCIÓN PRINCIPAL CON GRILLA Y 3 CARDS [1] -->
+  <section id="servicios" class="container mt-5 pt-4">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Mis Experiencias Formativas</h2>
+      <p class="text-muted">Desarrollo de soluciones tecnológicas en situaciones reales de trabajo.</p>
+    </div>
+
+    <!-- Sistema de grillas: 1 col en móvil, 3 en tablets/PC [7] -->
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-12 col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body text-center p-4">
+            <div class="display-6 text-primary mb-3">💻</div>
+            <h5 class="card-title fw-bold">Desarrollo Web</h5>
+            <p class="card-text text-muted small">Creación de interfaces adaptativas usando HTML5, CSS3 y ahora Bootstrap 5 [8].</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-12 col-md-4">
+        <div class="card h-100 shadow-sm border-0 border-top border-4 border-warning">
+          <div class="card-body text-center p-4">
+            <div class="display-6 text-warning mb-3">📂</div>
+            <h5 class="card-title fw-bold">Bases de Datos</h5>
+            <p class="card-text text-muted small">Modelado y gestión eficiente de datos relacionales para sistemas de información [9].</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-12 col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body text-center p-4">
+            <div class="display-6 text-success mb-3">🛠️</div>
+            <h5 class="card-title fw-bold">Soporte Técnico</h5>
+            <p class="card-text text-muted small">Mantenimiento preventivo y correctivo de hardware y software institucional.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. FORMULARIO DE CONTACTO AL FINAL [1] -->
+  <section id="contacto" class="container mt-5 mb-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card shadow p-4 border-0 rounded-4">
+          <h4 class="text-center mb-4 fw-bold">Enviar Mensaje</h4>
+          <form action="#" method="POST">
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Nombre Completo</label>
+              <input type="text" class="form-control" placeholder="Ej. María Lourdes" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Correo Electrónico</label>
+              <input type="email" class="form-control" placeholder="nombre@ejemplo.com" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Mensaje</label>
+              <textarea class="form-control" rows="4" placeholder="¿En qué puedo ayudarte?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-custom w-100 fw-bold py-2">ENVIAR FORMULARIO</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center py-4 text-muted border-top">
+    <small>Estudiante: Huanay Estrada María Lourdes | IESTP Misioneros Monfortianos 2026 [10]</small>
+  </footer>
+
+  <!-- Requisito 1.3: Enlace al JavaScript de Bootstrap [11] -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

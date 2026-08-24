@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+  <meta charset="UTF-8">
+  <!-- Etiqueta obligatoria para que el diseño sea adaptativo -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reto 04 - Formulario de Matrícula</title>
+  <!-- Enlace al CSS de Bootstrap 5 vía CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        
+        <!-- Tarjeta del Formulario (Basada en la imagen del reto) -->
+        <div class="card shadow border-0">
+          <!-- Cabecera azul solicitada -->
+          <div class="card-header bg-primary text-white p-3">
+            <h4 class="mb-0">Formulario de Matrícula</h4>
+          </div>
+          
+          <div class="card-body p-4">
+            <form action="#" method="POST" class="row g-3">
+              
+              <!-- Nombres: 6 col en escritorio, 12 en móvil -->
+              <div class="col-12 col-md-6">
+                <label for="nombres" class="form-label fw-bold">Nombres</label>
+                <input type="text" class="form-control" id="nombres" placeholder="Ej. Juan Carlos" required>
+              </div>
+
+              <!-- Apellidos: 6 col en escritorio, 12 en móvil -->
+              <div class="col-12 col-md-6">
+                <label for="apellidos" class="form-label fw-bold">Apellidos</label>
+                <input type="text" class="form-control" id="apellidos" placeholder="Ej. Pérez Gómez" required>
+              </div>
+
+              <!-- DNI: 4 col en escritorio, 12 en móvil -->
+              <div class="col-12 col-md-4">
+                <label for="dni" class="form-label fw-bold">DNI</label>
+                <input type="text" class="form-control" id="dni" placeholder="8 dígitos" maxlength="8" required>
+              </div>
+
+              <!-- Teléfono: 4 col en escritorio, 12 en móvil -->
+              <div class="col-12 col-md-4">
+                <label for="telefono" class="form-label fw-bold">Teléfono</label>
+                <input type="tel" class="form-control" id="telefono" placeholder="987654321" required>
+              </div>
+
+              <!-- Carrera: 4 col en escritorio, 12 en móvil -->
+              <div class="col-12 col-md-4">
+                <label for="carrera" class="form-label fw-bold">Carrera</label>
+                <select id="carrera" class="form-select" required>
+                  <option selected disabled value="">Seleccionar...</option>
+                  <option>Desarrollo de Sistemas de Información</option>
+                  <option>Contabilidad</option>
+                  <option>Enfermería Técnica</option>
+                </select>
+              </div>
+
+              <!-- Dirección: 12 col (fila completa en todo momento) -->
+              <div class="col-12">
+                <label for="direccion" class="form-label fw-bold">Dirección</label>
+                <input type="text" class="form-control" id="direccion" placeholder="Av. Principal #123" required>
+              </div>
+
+              <!-- Botones de acción alineados a la derecha -->
+              <div class="col-12 d-flex justify-content-end gap-2 mt-4">
+                <button type="reset" class="btn btn-outline-secondary px-4">Limpiar</button>
+                <button type="submit" class="btn btn-primary px-4">Registrar Matrícula</button>
+              </div>
+
+            </form>
+          </div>
+        </div> <!-- Fin card -->
+
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript de Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

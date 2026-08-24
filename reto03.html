@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reto 03 - Planes de Suscripción</title>
+  <!-- Integración de Bootstrap 5 vía CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Estilo personalizado para el resaltado solicitado en la guía */
+    .card-resaltada {
+        padding: 40px 20px !important; /* Mayor padding que las laterales */
+        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        z-index: 1; /* Asegura que la sombra se vea sobre las demás */
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+  <div class="container mt-5">
+    <h2 class="text-center mb-5">Nuestros Planes de Suscripción</h2>
+    
+    <!-- Requisito técnico: align-items-center para alineación vertical [1] -->
+    <div class="row align-items-center g-0 justify-content-center">
+      
+      <!-- Plan Básico (Lateral Izquierdo) -->
+      <div class="col-md-3">
+        <div class="card text-center shadow-sm border-end-0">
+          <div class="card-body p-4">
+            <h3 class="fw-normal">Básico</h3>
+            <p class="h4 my-4">S/ 50 <small class="text-muted">/ mes</small></p>
+            <button class="btn btn-outline-primary w-100">Elegir Plan</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plan PRO (Central Resaltado) -->
+      <!-- Este bloque resalta por color y dimensiones [1] -->
+      <div class="col-md-4">
+        <div class="card card-resaltada text-center bg-primary text-white border-0 rounded-3">
+          <div class="card-body">
+            <h2 class="fw-bold">PRO</h2>
+            <p class="h3 my-4">S/ 120 <small class="text-white-50">/ mes</small></p>
+            <hr class="bg-white">
+            <p class="card-text">Acceso total a todos los módulos y soporte premium 24/7.</p>
+            <button class="btn btn-light btn-lg w-100 fw-bold text-primary">LO QUIERO AHORA</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plan Premium (Lateral Derecho) -->
+      <div class="col-md-3">
+        <div class="card text-center shadow-sm border-start-0">
+          <div class="card-body p-4">
+            <h3 class="fw-normal">Premium</h3>
+            <p class="h4 my-4">S/ 200 <small class="text-muted">/ mes</small></p>
+            <button class="btn btn-outline-primary w-100">Elegir Plan</button>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- Fin row -->
+  </div> <!-- Fin container -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
